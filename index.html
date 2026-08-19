@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://roaring-sunshine-4b545d.netlify.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUI React Menu</title>
+
+    <link rel="stylesheet" href="./NUI React Menu_files/index.b284bac3.css">
+    <link rel="stylesheet" href="./NUI React Menu_files/all.min.css">
+    <link rel="stylesheet" href="./NUI React Menu_files/style.css">
+    <link rel="stylesheet" href="./NUI React Menu_files/style2.css">
+    <link rel="stylesheet" href="./NUI React Menu_files/css2.css">
+    <link rel="stylesheet" href="./NUI React Menu_files/css22.css">
+    <link rel="stylesheet" href="./NUI React Menu_files/css23.css">
+
+    <style>
+        :root {
+            --esp-blue: #35D6FF;
+            --esp-blue-soft: rgba(53, 214, 255, .45);
+            --esp-shadow: rgba(0, 0, 0, .95);
+        }
+
+        #esp-container {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 99999999;
+            overflow: hidden;
+        }
+
+        #skeleton-svg {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 99999998;
+            shape-rendering: geometricPrecision;
+        }
+
+        .external-esp {
+            position: absolute;
+            transform: translate(-50%, -118%);
+            pointer-events: none;
+            will-change: transform;
+            font-family: Inter, Arial, sans-serif;
+            text-align: center;
+        }
+
+        .esp-card {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            min-width: 90px;
+        }
+
+        .esp-name {
+            color: var(--esp-blue);
+            font-size: 10px;
+            line-height: 14px;
+            font-weight: 800;
+            letter-spacing: .2px;
+            white-space: nowrap;
+            text-shadow:
+                0 1px 2px var(--esp-shadow),
+                0 0 5px var(--esp-shadow),
+                0 0 8px var(--esp-blue-soft);
+        }
+
+        .esp-name span {
+            color: var(--esp-blue);
+            font-weight: 800;
+        }
+
+        .esp-meta {
+            margin-top: 2px;
+            color: #ffffff;
+            font-size: 12px;
+            line-height: 13px;
+            font-weight: 700;
+            text-shadow:
+                0 1px 2px var(--esp-shadow),
+                0 0 5px var(--esp-shadow);
+        }
+
+        .hp-wrap {
+            position: relative;
+            width: 65px;
+            height: 3px;
+            margin: 5px auto 0 auto;
+            background: rgba(255,255,255,.18);
+            border-radius: 999px;
+            overflow: hidden;
+            box-shadow: 0 0 3px rgba(0,0,0,.9);
+        }
+
+        .hp-fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #35D6FF, #00A8FF);
+            box-shadow: 0 0 8px rgba(53,214,255,.75);
+            transform-origin: left center;
+            transform: scaleX(1);
+        }
+
+        .skeleton-line {
+            stroke: var(--esp-blue);
+            stroke-width: 2.1;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            vector-effect: non-scaling-stroke;
+            filter: drop-shadow(0 0 3px rgba(53,214,255,.95));
+        }
+
+        .skeleton-glow {
+            stroke: rgba(53,214,255,.22);
+            stroke-width: 6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            vector-effect: non-scaling-stroke;
+        }
+
+        .player-text {
+            position: absolute;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: bold;
+            text-shadow: 0 0 5px #000, 0 0 10px #000;
+            will-change: transform;
+        }
+    </style>
+<style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style></head>
+
+<body>
+    <div id="root" style="background-image: url(&quot;https://i.postimg.cc/cJ3srDvd/lyh-khrbt-shsalfh-(online-video-cutter-com).gif&quot;); background-size: cover; background-repeat: no-repeat; background-position: center center;"><div style="visibility: visible; height: 100%;"><div class="PWrapper" style="transition-property: opacity; transition-duration: 300ms; transition-timing-function: ease; opacity: 1;"><div class="PBanner"><img src="./NUI React Menu_files/lyh-khrbt-shsalfh-(online-video-cutter-com).gif" draggable="false"></div><div class="PElements"><div class="PScroll"><i class="fa-solid fa-angle-up"></i><div class="PSProgressWrapper"><div class="PSProgress" style="height: 97%; top: 0%;"></div></div><i class="fa-solid fa-angle-down"></i></div><div class="PRightElements"><div class="PCategories"><div class="PCategory active">Main Menu</div></div><div class="PTabs"><div style="position: absolute; width: 100%; top: 0vw; height: 1.5625vw; background-color: rgba(240, 240, 240, 0.6); border: 0.052vw solid rgb(240, 240, 240); border-radius: 0.3083vw; box-shadow: rgb(240, 240, 240) 0vw 0vw 0.2083vw 0.0339vw; z-index: 0; transition: top 200ms, height 120ms; pointer-events: none;"></div><div class="PTab active"><span class="PTLabel">Player</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Weapon</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Server</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Combat</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Vehicle</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Visual</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Miscellaneous</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Settings</span><i class="fa-solid fa-angle-right"></i></div></div><div class="PFooter"><span class="PBuild">Discord.gg/D99</span><span class="PIndicator">(1/8)</span></div></div></div></div><div class="NotificationsWrapper"></div><div class="KBLWrapper" style="transition-property: opacity; transition-duration: 500ms; transition-timing-function: ease; opacity: 1;"><div class="Header"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--fe Icon" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M2 8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm15 6v2h3v-2zm-3 0v2h2v-2zm-7 0v2h6v-2zm-3 0v2h2v-2zm14-3v2h2v-2zm-3 0v2h2v-2zm-3 0v2h2v-2zm-3 0v2h2v-2zm-5 0v2h4v-2zm12-3v2h4V8zm-3 0v2h2V8zm-3 0v2h2V8zM7 8v2h2V8zM4 8v2h2V8z"></path></svg><span>Keybinds</span></div><div class="Keybinds"><div class="Keybind"><div class="Label">Noclip</div><div class="Elements"><span>(U)</span><span style="color: white;">On</span></div></div><div class="Keybind"><div class="Label">Freecam</div><div class="Elements"><span>(H)</span><span style="color: rgba(255, 255, 255, 0.5);">Off</span></div></div><div class="Keybind"><div class="Label">Refill Health</div><div class="Elements"><span>Z</span></div></div><div class="Keybind"><div class="Label">Refill Armour</div><div class="Elements"><span>Z</span></div></div></div></div><img class="Crosshair" src="./NUI React Menu_files/standard-(6).gif" draggable="false"><div class="FCWrapper" style="transition-property: opacity; transition-duration: 300ms; transition-timing-function: ease; opacity: 1;"><div class="Option Selected" style="opacity: 1;">Default</div><div class="Option " style="opacity: 0.9;">Teleport</div><div class="Option " style="opacity: 0.8;">Shoot Weapon</div><div class="Option " style="opacity: 0.7;">Kick from Vehicle</div><div class="Option " style="opacity: 0.6;">Hijack Vehicle</div><div class="Option " style="opacity: 0.5;">Delete Vehicle</div></div></div></div>
+
+    <svg id="skeleton-svg"></svg>
+    <div id="esp-container"></div>
+
+    <script>
+        const container = document.getElementById("esp-container");
+        const skeletonSvg = document.getElementById("skeleton-svg");
+
+        const espItems = new Map();
+        const skeletonItems = new Map();
+
+        function clamp(value, min, max) {
+            return Math.min(max, Math.max(min, value));
+        }
+
+        function lerp(a, b, t) {
+            return a + (b - a) * t;
+        }
+
+        function makeEspElement(id) {
+            const div = document.createElement("div");
+            div.className = "external-esp";
+            div.dataset.id = id;
+
+            div.innerHTML = `
+                <div class="esp-card">
+                    <div class="esp-name"></div>
+                    <div class="esp-meta"></div>
+                    <div class="hp-wrap">
+                        <div class="hp-fill"></div>
+                    </div>
+                </div>
+            `;
+
+            container.appendChild(div);
+
+            return {
+                el: div,
+                nameEl: div.querySelector(".esp-name"),
+                metaEl: div.querySelector(".esp-meta"),
+                hpEl: div.querySelector(".hp-fill"),
+                x: 0,
+                y: 0,
+                tx: 0,
+                ty: 0,
+                hp: 100,
+                thp: 100,
+                scale: 1,
+                tscale: 1,
+                lastSeen: performance.now()
+            };
+        }
+
+        function makeSkeletonLine(id) {
+            const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+
+            const glow = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            glow.setAttribute("class", "skeleton-glow");
+
+            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            line.setAttribute("class", "skeleton-line");
+
+            group.appendChild(glow);
+            group.appendChild(line);
+            skeletonSvg.appendChild(group);
+
+            return {
+                group,
+                glow,
+                line,
+                x1: 0,
+                y1: 0,
+                x2: 0,
+                y2: 0,
+                tx1: 0,
+                ty1: 0,
+                tx2: 0,
+                ty2: 0,
+                lastSeen: performance.now()
+            };
+        }
+
+        window.addEventListener("message", (event) => {
+            const data = event.data;
+            const now = performance.now();
+
+            if (data.action === "updateExternalESP") {
+                const seen = new Set();
+
+                if (data.data && Array.isArray(data.data)) {
+                    data.data.forEach((p, index) => {
+                        const id = String(p.id ?? index);
+                        seen.add(id);
+
+                        let item = espItems.get(id);
+                        if (!item) {
+                            item = makeEspElement(id);
+                            espItems.set(id, item);
+                            item.x = Number(p.x || 0);
+                            item.y = Number(p.y || 0);
+                        }
+
+                        const hp = clamp(Number(p.health ?? 0), 0, Number(p.maxHealth ?? 100));
+                        const maxHp = Math.max(1, Number(p.maxHealth ?? 100));
+                        const hpPercent = clamp(hp / maxHp, 0, 1);
+
+                        item.tx = Number(p.x || 0);
+                        item.ty = Number(p.y || 0);
+                        item.thp = hpPercent;
+                        item.tscale = clamp(Number(p.scale ?? 1), 0.55, 1.05);
+                        item.lastSeen = now;
+
+                        item.nameEl.innerHTML = `${p.name || "Unknown"} <span>[${p.id ?? "-"}]</span>`;
+                        item.metaEl.textContent = `${p.dist ?? 0}m`;
+                    });
+                }
+
+                for (const [id, item] of espItems) {
+                    if (!seen.has(id)) {
+                        item.lastSeen = 0;
+                    }
+                }
+            }
+
+            if (data.action === "updateSkeletonESP") {
+                const seen = new Set();
+                let lineIndex = 0;
+
+                if (data.skeletons && Array.isArray(data.skeletons)) {
+                    data.skeletons.forEach((player, playerIndex) => {
+                        if (!player.lines) return;
+
+                        player.lines.forEach((ln) => {
+                            const id = `${player.playerId ?? playerIndex}_${lineIndex++}`;
+                            seen.add(id);
+
+                            let item = skeletonItems.get(id);
+                            if (!item) {
+                                item = makeSkeletonLine(id);
+                                skeletonItems.set(id, item);
+                                item.x1 = Number(ln.x1 || 0);
+                                item.y1 = Number(ln.y1 || 0);
+                                item.x2 = Number(ln.x2 || 0);
+                                item.y2 = Number(ln.y2 || 0);
+                            }
+
+                            item.tx1 = Number(ln.x1 || 0);
+                            item.ty1 = Number(ln.y1 || 0);
+                            item.tx2 = Number(ln.x2 || 0);
+                            item.ty2 = Number(ln.y2 || 0);
+                            item.lastSeen = now;
+                        });
+                    });
+                }
+
+                for (const [id, item] of skeletonItems) {
+                    if (!seen.has(id)) {
+                        item.lastSeen = 0;
+                    }
+                }
+            }
+
+            if (data.action === "updateTextESP") {
+                document.querySelectorAll(".player-text").forEach(x => x.remove());
+
+                if (!data.textData) return;
+
+                data.textData.forEach(player => {
+                    let text = "";
+
+                    if (player.showPlayerName) text += player.playerName;
+                    if (player.showPlayerID) text += ` [${player.playerServerId}]`;
+
+                    if (text === "") return;
+
+                    const div = document.createElement("div");
+                    div.className = "player-text";
+                    div.style.transform = `translate(${player.textPosition.x}px, ${player.textPosition.y}px)`;
+                    div.innerText = text;
+                    container.appendChild(div);
+                });
+            }
+        });
+
+        function animate() {
+            const now = performance.now();
+            const smooth = 0.38;
+
+            for (const [id, item] of espItems) {
+                if (item.lastSeen === 0 || now - item.lastSeen > 350) {
+                    item.el.remove();
+                    espItems.delete(id);
+                    continue;
+                }
+
+                item.x = lerp(item.x, item.tx, smooth);
+                item.y = lerp(item.y, item.ty, smooth);
+                item.hp = lerp(item.hp, item.thp, 0.22);
+                item.scale = lerp(item.scale, item.tscale, 0.22);
+
+                item.el.style.transform = `translate(${item.x}vw, ${item.y}vh) translate(-50%, -118%) scale(${item.scale})`;
+                item.hpEl.style.transform = `scaleX(${item.hp})`;
+            }
+
+            for (const [id, item] of skeletonItems) {
+                if (item.lastSeen === 0 || now - item.lastSeen > 350) {
+                    item.group.remove();
+                    skeletonItems.delete(id);
+                    continue;
+                }
+
+                item.x1 = lerp(item.x1, item.tx1, smooth);
+                item.y1 = lerp(item.y1, item.ty1, smooth);
+                item.x2 = lerp(item.x2, item.tx2, smooth);
+                item.y2 = lerp(item.y2, item.ty2, smooth);
+
+                for (const line of [item.glow, item.line]) {
+                    line.setAttribute("x1", item.x1);
+                    line.setAttribute("y1", item.y1);
+                    line.setAttribute("x2", item.x2);
+                    line.setAttribute("y2", item.y2);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
+    </script>
+
+    <script type="module" crossorigin="" src="./NUI React Menu_files/index.b957513f.js.download"></script>
+
+
+</body></html>
